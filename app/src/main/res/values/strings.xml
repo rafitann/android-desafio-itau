@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">android-desafio-itau</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="value">R$ 250,00</string>
+    <string name="origin">Carrefour</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.ncz.android_desafio_itau.app.view
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,7 @@ import com.ncz.android_desafio_itau.domain.utils.states.Status
 class HomeFragment : Fragment(R.layout.fragment_home) {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private var homeAdapter = HomeAdapter()
 
     private val homeViewModel: HomeViewModel by viewModels()
 
@@ -33,6 +35,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         setupToolbar()
         observableReleases()
+        setupAdapter()
+        homeViewModel.getReleases()
     }
 
     override fun onDestroyView() {
@@ -48,7 +52,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         homeViewModel.releaseLiveData.observe(viewLifecycleOwner) { release ->
             when (release.status) {
                 Status.SUCCESS -> {
-                    release.data?.let { data -> setupAdapter(data) }
+                    homeViewModel.getReleases()
 
                 }
                 Status.ERROR -> {
@@ -61,19 +65,18 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
     }
 
-    private fun setupAdapter(releases:List<Release>){
-        val layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
-        val recycler =  binding.releasesRecyclerView
-        recycler.layoutManager = layoutManager
-        recycler.adapter = HomeAdapter(releases)
+    private fun setupAdapter() {
+        val release : List<Release> = listOf()
+      homeAdapter = HomeAdapter(release)
+        binding.releasesRecyclerView.adapter = homeAdapter
     }
 
-    companion object Categories {
-        const val TRANSPORT = "Transporte"
-        const val SHOPPING_ONLINE = "Compras Online"
-        const val HEALTH_AND_BEAUTY = "Saúde e Beleza"
-        const val AUTOMOTIVE_SERVICES = "Serviços Automotivos"
-        const val RESTAURANTS = "Restaurantes"
-        const val SUPERMARKET = "Super Mercados"
-    }
+//    companion object Categories {
+//        const val TRANSPORT = "Transporte"
+//        const val SHOPPING_ONLINE = "Compras Online"
+//        const val HEALTH_AND_BEAUTY = "Saúde e Beleza"
+//        const val AUTOMOTIVE_SERVICES = "Serviços Automotivos"
+//        const val RESTAURANTS = "Restaurantes"
+//        const val SUPERMARKET = "Super Mercados"
+//    }
 }

@@ -10,18 +10,18 @@
         android:id="@+id/includeToolbar"
         layout="@layout/toolbar" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/releasesRecyclerView"
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                tools:listitem="@layout/release_card" />
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/releasesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/release_card" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

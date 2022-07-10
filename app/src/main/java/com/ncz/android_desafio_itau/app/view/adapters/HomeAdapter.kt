@@ -5,8 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ncz.android_desafio_itau.databinding.ReleaseCardBinding
 import com.ncz.android_desafio_itau.domain.model.Release
+import com.ncz.android_desafio_itau.domain.utils.states.OnClick
 
 class HomeAdapter(val release: List<Release> = listOf()) : RecyclerView.Adapter<HomeAdapter.ReleaseViewHolder>() {
+
+    private lateinit var onClick: OnClick
+
 
     inner class ReleaseViewHolder(binding: ReleaseCardBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -23,7 +27,18 @@ class HomeAdapter(val release: List<Release> = listOf()) : RecyclerView.Adapter<
         holder.originName.text = release[position].origem
         holder.value.text = release[position].valor.toString()
         release[position].categoria
+
+        val item = holder.itemView
+        item.setOnClickListener{
+            onClick.onCellClickListener(release[position])
+        }
     }
 
     override fun getItemCount() = release.size
+
+    fun onClickListener(onClick: OnClick){
+        this.onClick = onClick
+
+    }
 }
+

@@ -18,5 +18,9 @@
         android:id="@+id/detailsFragment"
         android:name="com.ncz.android_desafio_itau.app.view.fragments.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="ReleaseObject"
+            app:argType="com.ncz.android_desafio_itau.domain.model.Release" />
+    </fragment>
 </navigation>

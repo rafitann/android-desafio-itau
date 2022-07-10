@@ -6,8 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ncz.android_desafio_itau.databinding.ReleaseCardBinding
 import com.ncz.android_desafio_itau.domain.model.Release
 
-class HomeAdapter(private val releases: ArrayList<Release> = arrayListOf()) :
-    RecyclerView.Adapter<HomeAdapter.ReleaseViewHolder>() {
+class HomeAdapter(val release: List<Release> = listOf()) : RecyclerView.Adapter<HomeAdapter.ReleaseViewHolder>() {
 
     inner class ReleaseViewHolder(binding: ReleaseCardBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -21,10 +20,10 @@ class HomeAdapter(private val releases: ArrayList<Release> = arrayListOf()) :
     }
 
     override fun onBindViewHolder(holder: HomeAdapter.ReleaseViewHolder, position: Int) {
-        holder.originName.text = releases[position].origem
-        holder.value.text = releases[position].valor.toString()
-        releases[position].categoria
+        holder.originName.text = release[position].origem
+        holder.value.text = release[position].valor.toString()
+        release[position].categoria
     }
 
-    override fun getItemCount() = releases.size
+    override fun getItemCount() = release.size
 }

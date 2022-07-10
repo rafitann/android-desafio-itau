@@ -18,7 +18,7 @@ class HomeViewModel : ViewModel() {
     private val usecases = ReleasesUseCases(repository)
 
 
-    private val releaseLiveData: MutableLiveData<State<List<Release>>> by lazy { MutableLiveData() }
+    val releaseLiveData: MutableLiveData<State<List<Release>>> by lazy { MutableLiveData() }
 
     fun getReleases() {
         viewModelScope.launch {

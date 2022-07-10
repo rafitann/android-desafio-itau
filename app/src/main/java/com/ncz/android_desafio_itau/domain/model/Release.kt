@@ -1,6 +1,7 @@
 package com.ncz.android_desafio_itau.domain.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Release(
     @SerializedName("id") val id: Int,
@@ -8,4 +9,4 @@ data class Release(
     @SerializedName("origem") val origem: String,
     @SerializedName("categoria") val categoria: Int,
     @SerializedName("mes_lancamento") val mesLancamento: Int
-)
+) : Serializable

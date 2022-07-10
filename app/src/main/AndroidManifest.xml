@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Androiddesafioitau"
         tools:targetApi="31">
         <activity
-            android:name=".app.view.MainActivity"
+            android:name=".app.view.BaseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

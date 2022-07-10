@@ -1,4 +1,4 @@
-package com.ncz.android_desafio_itau.app.view
+package com.ncz.android_desafio_itau.app.view.activitys
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,10 +1,9 @@
-package com.ncz.android_desafio_itau.app.view
+package com.ncz.android_desafio_itau.app.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.ncz.android_desafio_itau.R
@@ -49,7 +48,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private fun observableReleases() {
         homeViewModel.releaseLiveData.observe(viewLifecycleOwner) { release ->
             when (release.status) {
+                Status.LOADING ->{
+                    binding.progressBar.visibility = View.VISIBLE
+                }
                 Status.SUCCESS -> {
+                    binding.progressBar.visibility = View.GONE
                     release.data?.let { data -> setupAdapter(data) }
 
                 }

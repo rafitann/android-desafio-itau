@@ -1,4 +1,4 @@
-package com.ncz.android_desafio_itau.app.view
+package com.ncz.android_desafio_itau.app.view.activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

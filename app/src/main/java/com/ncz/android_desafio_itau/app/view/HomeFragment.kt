@@ -1,16 +1,15 @@
 package com.ncz.android_desafio_itau.app.view
 
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.ncz.android_desafio_itau.R
+import com.ncz.android_desafio_itau.app.view.adapters.HomeAdapter
+import com.ncz.android_desafio_itau.app.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
-    private fun teste(){
-        val image = ImageView(requireContext())
-        image.setImageResource(R.drawable.ic_health_and_beauty)
-    }
-
+    val HomeViewModel: HomeViewModel by viewModels()
+    private val adapter = HomeAdapter()
 
     companion object Categories{
         const val TRANSPORT = "Transporte"

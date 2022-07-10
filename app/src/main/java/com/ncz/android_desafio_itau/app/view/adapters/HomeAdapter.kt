@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ncz.android_desafio_itau.databinding.ReleaseCardBinding
 import com.ncz.android_desafio_itau.domain.model.Release
 
-class HomeAdapter(private val releases: MutableList<Release>) :
+class HomeAdapter(private val releases: ArrayList<Release> = arrayListOf()) :
     RecyclerView.Adapter<HomeAdapter.ReleaseViewHolder>() {
 
     inner class ReleaseViewHolder(binding: ReleaseCardBinding) :

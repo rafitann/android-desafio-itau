@@ -1,13 +1,11 @@
 package com.ncz.android_desafio_itau.app.view
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.ncz.android_desafio_itau.R
 import com.ncz.android_desafio_itau.app.view.adapters.HomeAdapter
 import com.ncz.android_desafio_itau.app.viewmodel.HomeViewModel
@@ -35,7 +33,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         setupToolbar()
         observableReleases()
-        setupAdapter()
         homeViewModel.getReleases()
     }
 
@@ -52,7 +49,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         homeViewModel.releaseLiveData.observe(viewLifecycleOwner) { release ->
             when (release.status) {
                 Status.SUCCESS -> {
-                    homeViewModel.getReleases()
+                    release.data?.let { data -> setupAdapter(data) }
 
                 }
                 Status.ERROR -> {
@@ -65,18 +62,17 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
     }
 
-    private fun setupAdapter() {
-        val release : List<Release> = listOf()
+    private fun setupAdapter(release:List<Release>) {
       homeAdapter = HomeAdapter(release)
         binding.releasesRecyclerView.adapter = homeAdapter
     }
 
-//    companion object Categories {
-//        const val TRANSPORT = "Transporte"
-//        const val SHOPPING_ONLINE = "Compras Online"
-//        const val HEALTH_AND_BEAUTY = "Saúde e Beleza"
-//        const val AUTOMOTIVE_SERVICES = "Serviços Automotivos"
-//        const val RESTAURANTS = "Restaurantes"
-//        const val SUPERMARKET = "Super Mercados"
-//    }
+    companion object Categories {
+        const val TRANSPORT = "Transporte"
+        const val SHOPPING_ONLINE = "Compras Online"
+        const val HEALTH_AND_BEAUTY = "Saúde e Beleza"
+        const val AUTOMOTIVE_SERVICES = "Serviços Automotivos"
+        const val RESTAURANTS = "Restaurantes"
+        const val SUPERMARKET = "Super Mercados"
+    }
 }

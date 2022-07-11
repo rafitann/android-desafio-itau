@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ncz.android_desafio_itau.databinding.ReleaseCardBinding
 import com.ncz.android_desafio_itau.domain.model.Release
 import com.ncz.android_desafio_itau.domain.utils.states.OnClick
+import com.ncz.android_desafio_itau.domain.utils.states.toCurrencyFormat
 
 class HomeAdapter(val release: List<Release> = listOf()) : RecyclerView.Adapter<HomeAdapter.ReleaseViewHolder>() {
 
@@ -25,7 +26,7 @@ class HomeAdapter(val release: List<Release> = listOf()) : RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: HomeAdapter.ReleaseViewHolder, position: Int) {
         holder.originName.text = release[position].origem
-        holder.value.text = release[position].valor.toString()
+        holder.value.text = release[position].valor.toCurrencyFormat()
         release[position].categoria
 
         val item = holder.itemView

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.ncz.android_desafio_itau.R
 import com.ncz.android_desafio_itau.databinding.FragmentDetailsBinding
+import com.ncz.android_desafio_itau.domain.utils.states.toCurrencyFormat
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
     private var _binding: FragmentDetailsBinding? = null
@@ -30,15 +31,15 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         getDetail()
     }
 
-    private fun getDetail(){
-        binding.origin.text = args.releaseObject.origem
-        binding.value.text = args.releaseObject.valor.toString()
-        binding.category.text = args.releaseObject.categoria.toString()
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun getDetail() {
+        binding.origin.text = args.releaseObject.origem
+        binding.value.text = args.releaseObject.valor.toCurrencyFormat()
+        binding.category.text = args.releaseObject.categoria.toString()
     }
 
     private fun setupToolbar() {

@@ -3,20 +3,25 @@ package com.ncz.android_desafio_itau.app.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.ncz.android_desafio_itau.data.datasource.CategoryDataSource
 import com.ncz.android_desafio_itau.data.datasource.ReleaseDataSource
-import com.ncz.android_desafio_itau.data.repository.ReleaseRepository
+import com.ncz.android_desafio_itau.data.repository.HomeRepository
 import com.ncz.android_desafio_itau.domain.model.Release
+import com.ncz.android_desafio_itau.domain.repositories.InterfaceHomeRepository
 import com.ncz.android_desafio_itau.domain.usescases.ReleasesUseCases
 import com.ncz.android_desafio_itau.domain.utils.states.State
+import com.ncz.android_desafio_itau.infrastructure.datasources.InterfaceCategoryDataSource
+import com.ncz.android_desafio_itau.infrastructure.datasources.InterfaceReleaseDataSource
 import kotlinx.coroutines.launch
 import java.io.IOException
 import java.lang.Exception
 
 class HomeViewModel : ViewModel() {
-    private val dataSource = ReleaseDataSource()
-    private val repository = ReleaseRepository(dataSource)
-    private val usecases = ReleasesUseCases(repository)
+    private var releaseDataSource: InterfaceReleaseDataSource = ReleaseDataSource()
+    var categoriesDataSource: InterfaceCategoryDataSource = CategoryDataSource()
 
+    private var repository: InterfaceHomeRepository = HomeRepository(releaseDataSource,categoriesDataSource )
+    private val usecases = ReleasesUseCases(repository)
 
     val releaseLiveData: MutableLiveData<State<List<Release>>> by lazy { MutableLiveData() }
 

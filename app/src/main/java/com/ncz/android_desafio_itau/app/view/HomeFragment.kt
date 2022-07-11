@@ -76,13 +76,4 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
         })
     }
-
-//    companion object Categories {
-//        const val TRANSPORT = "Transporte" //1
-//        const val SHOPPING_ONLINE = "Compras Online"
-//        const val HEALTH_AND_BEAUTY = "Saúde e Beleza"
-//        const val AUTOMOTIVE_SERVICES = "Serviços Automotivos"
-//        const val RESTAURANTS = "Restaurantes"
-//        const val SUPERMARKET = "Super Mercados"
-//    }
 }

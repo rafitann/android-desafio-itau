@@ -39,8 +39,9 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
     private fun getDetail() {
         binding.origin.text = args.releaseObject.origem
         binding.value.text = args.releaseObject.valor.toCurrencyFormat()
-        binding.category.text = args.releaseObject.categoria.toString()
+        binding.category.text = args.releaseObject.categoria?.nome.toString()
     }
+
 
     private fun setupToolbar() {
         binding.includeToolbar.toolbar.title = getString(R.string.details)

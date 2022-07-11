@@ -17,6 +17,7 @@ class HomeAdapter(val release: List<Release> = listOf()) : RecyclerView.Adapter<
         RecyclerView.ViewHolder(binding.root) {
         val originName = binding.originName
         val value = binding.value
+        val category = binding.category
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReleaseViewHolder {
@@ -27,6 +28,7 @@ class HomeAdapter(val release: List<Release> = listOf()) : RecyclerView.Adapter<
     override fun onBindViewHolder(holder: HomeAdapter.ReleaseViewHolder, position: Int) {
         holder.originName.text = release[position].origem
         holder.value.text = release[position].valor.toCurrencyFormat()
+        holder.category.text = release[position].categoria?.nome.toString()
         release[position].categoria
 
         val item = holder.itemView

@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 data class Release(
-    @SerializedName("id") val id: Int,
-    @SerializedName("valor") val valor: Double,
-    @SerializedName("origem") val origem: String,
-    @SerializedName("categoria") val categoria: Int,
-    @SerializedName("mes_lancamento") val mesLancamento: Int
+    val id: Int,
+    val valor: Double,
+    val origem: String,
+    var categoria: Category? = null,
+    val mesLancamento: Int
 ) : Serializable

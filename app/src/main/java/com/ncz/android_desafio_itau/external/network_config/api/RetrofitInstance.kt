@@ -1,4 +1,4 @@
-package com.ncz.android_desafio_itau.data.network.api
+package com.ncz.android_desafio_itau.external.network_config.api
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

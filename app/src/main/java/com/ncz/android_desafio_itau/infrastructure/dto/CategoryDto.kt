@@ -1,7 +1,7 @@
 package com.ncz.android_desafio_itau.infrastructure.dto
 
 import com.google.gson.annotations.SerializedName
-import com.ncz.android_desafio_itau.domain.model.Category
+import com.ncz.android_desafio_itau.domain.Entities.Category
 import java.io.Serializable
 
 data class CategoryDto (

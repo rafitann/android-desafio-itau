@@ -1,6 +1,5 @@
-package com.ncz.android_desafio_itau.domain.model
+package com.ncz.android_desafio_itau.domain.Entities
 
-import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 data class Release(

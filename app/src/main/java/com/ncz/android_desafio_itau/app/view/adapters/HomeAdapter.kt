@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ncz.android_desafio_itau.databinding.ReleaseCardBinding
-import com.ncz.android_desafio_itau.domain.model.Release
-import com.ncz.android_desafio_itau.domain.utils.states.OnClick
+import com.ncz.android_desafio_itau.domain.Entities.Release
+import com.ncz.android_desafio_itau.domain.utils.extensions.OnClick
 import com.ncz.android_desafio_itau.domain.utils.states.toCurrencyFormat
 
 class HomeAdapter(val release: List<Release> = listOf()) : RecyclerView.Adapter<HomeAdapter.ReleaseViewHolder>() {

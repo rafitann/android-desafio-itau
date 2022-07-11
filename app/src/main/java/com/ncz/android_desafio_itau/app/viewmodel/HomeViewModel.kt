@@ -3,10 +3,10 @@ package com.ncz.android_desafio_itau.app.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ncz.android_desafio_itau.data.datasource.CategoryDataSource
-import com.ncz.android_desafio_itau.data.datasource.ReleaseDataSource
-import com.ncz.android_desafio_itau.data.repository.HomeRepository
-import com.ncz.android_desafio_itau.domain.model.Release
+import com.ncz.android_desafio_itau.external.datasources.CategoryDataSource
+import com.ncz.android_desafio_itau.external.datasources.ReleaseDataSource
+import com.ncz.android_desafio_itau.infrastructure.repository.HomeRepository
+import com.ncz.android_desafio_itau.domain.Entities.Release
 import com.ncz.android_desafio_itau.domain.repositories.InterfaceHomeRepository
 import com.ncz.android_desafio_itau.domain.usescases.ReleasesUseCases
 import com.ncz.android_desafio_itau.domain.utils.states.State

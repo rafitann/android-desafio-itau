@@ -1,6 +1,5 @@
-package com.ncz.android_desafio_itau.data.network.service
+package com.ncz.android_desafio_itau.external.network_config.service
 
-import com.ncz.android_desafio_itau.domain.model.Release
 import com.ncz.android_desafio_itau.infrastructure.dto.ReleaseDto
 import retrofit2.http.GET
 

@@ -11,8 +11,8 @@ import com.ncz.android_desafio_itau.R
 import com.ncz.android_desafio_itau.app.view.adapters.HomeAdapter
 import com.ncz.android_desafio_itau.app.viewmodel.HomeViewModel
 import com.ncz.android_desafio_itau.databinding.FragmentHomeBinding
-import com.ncz.android_desafio_itau.domain.model.Release
-import com.ncz.android_desafio_itau.domain.utils.states.OnClick
+import com.ncz.android_desafio_itau.domain.Entities.Release
+import com.ncz.android_desafio_itau.domain.utils.extensions.OnClick
 import com.ncz.android_desafio_itau.domain.utils.states.Status
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -70,7 +70,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private fun setupAdapter(release:List<Release>) {
       homeAdapter = HomeAdapter(release)
         binding.releasesRecyclerView.adapter = homeAdapter
-        homeAdapter.onClickListener(object : OnClick{
+        homeAdapter.onClickListener(object : OnClick {
             override fun onCellClickListener(release: Release) {
                 findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToDetailsFragment(release))
             }

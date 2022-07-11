@@ -1,7 +1,7 @@
-package com.ncz.android_desafio_itau.data.datasource
+package com.ncz.android_desafio_itau.external.datasources
 
-import com.ncz.android_desafio_itau.data.network.api.RetrofitInstance
-import com.ncz.android_desafio_itau.data.network.service.CategoryService
+import com.ncz.android_desafio_itau.external.network_config.api.RetrofitInstance
+import com.ncz.android_desafio_itau.external.network_config.service.CategoryService
 import com.ncz.android_desafio_itau.infrastructure.datasources.InterfaceCategoryDataSource
 import com.ncz.android_desafio_itau.infrastructure.dto.CategoryDto
 

@@ -11,7 +11,7 @@ import com.ncz.android_desafio_itau.R
 import com.ncz.android_desafio_itau.app.view.adapters.HomeAdapter
 import com.ncz.android_desafio_itau.app.viewmodel.HomeViewModel
 import com.ncz.android_desafio_itau.databinding.FragmentHomeBinding
-import com.ncz.android_desafio_itau.domain.Entities.Release
+import com.ncz.android_desafio_itau.domain.entities.Release
 import com.ncz.android_desafio_itau.domain.utils.extensions.OnClick
 import com.ncz.android_desafio_itau.domain.utils.states.Status
 

@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.ncz.android_desafio_itau.external.datasources.CategoryDataSource
 import com.ncz.android_desafio_itau.external.datasources.ReleaseDataSource
 import com.ncz.android_desafio_itau.infrastructure.repository.HomeRepository
-import com.ncz.android_desafio_itau.domain.Entities.Release
+import com.ncz.android_desafio_itau.domain.entities.Release
 import com.ncz.android_desafio_itau.domain.repositories.InterfaceHomeRepository
 import com.ncz.android_desafio_itau.domain.usescases.ReleasesUseCases
 import com.ncz.android_desafio_itau.domain.utils.states.State

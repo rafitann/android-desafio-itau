@@ -21,6 +21,6 @@
         tools:layout="@layout/fragment_details" >
         <argument
             android:name="ReleaseObject"
-            app:argType="com.ncz.android_desafio_itau.domain.model.Release" />
+            app:argType="com.ncz.android_desafio_itau.domain.entities.Release" />
     </fragment>
 </navigation>

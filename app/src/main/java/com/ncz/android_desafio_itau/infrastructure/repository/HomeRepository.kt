@@ -1,9 +1,9 @@
 package com.ncz.android_desafio_itau.infrastructure.repository
 
-import com.ncz.android_desafio_itau.domain.Entities.Category
+import com.ncz.android_desafio_itau.domain.entities.Category
 import com.ncz.android_desafio_itau.infrastructure.datasources.InterfaceCategoryDataSource
 import com.ncz.android_desafio_itau.infrastructure.datasources.InterfaceReleaseDataSource
-import com.ncz.android_desafio_itau.domain.Entities.Release
+import com.ncz.android_desafio_itau.domain.entities.Release
 import com.ncz.android_desafio_itau.domain.repositories.InterfaceHomeRepository
 
 class HomeRepository(

@@ -1,4 +1,4 @@
-package com.ncz.android_desafio_itau.domain.Entities
+package com.ncz.android_desafio_itau.domain.entities
 
 
 import java.io.Serializable

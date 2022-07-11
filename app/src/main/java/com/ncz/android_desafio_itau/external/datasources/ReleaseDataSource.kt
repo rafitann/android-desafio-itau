@@ -7,7 +7,7 @@ import com.ncz.android_desafio_itau.infrastructure.dto.ReleaseDto
 
 open class ReleaseDataSource : InterfaceReleaseDataSource {
 
-    private val releaseService by lazy { RetrofitInstance.retrofit.create(ReleasesService::class.java) }
+    val releaseService by lazy { RetrofitInstance.retrofit.create(ReleasesService::class.java) }
 
     override suspend fun getRelease(): List<ReleaseDto> {
         return releaseService.getReleases()

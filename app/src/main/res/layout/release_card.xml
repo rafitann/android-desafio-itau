@@ -57,14 +57,28 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
             android:text="@string/origin"
+            android:textAlignment="center"
             android:textColor="@color/primary_color"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/value"
             app:layout_constraintStart_toEndOf="@+id/imgIcon"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/category"
+            android:textAlignment="center"
+            android:textColor="@color/primary_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/originName"
+            app:layout_constraintStart_toStartOf="@+id/originName"
+            app:layout_constraintTop_toBottomOf="@+id/originName" />
 
         <TextView
             android:id="@+id/value"

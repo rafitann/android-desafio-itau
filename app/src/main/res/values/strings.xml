@@ -6,4 +6,6 @@
     <string name="releases">Lançamentos</string>
     <string name="details">Detalhes do Lançamento</string>
     <string name="category">Super Mercado</string>
+    <string name="conta_ita">Conta Itaú</string>
+    <string name="filtros">Filtros</string>
 </resources>

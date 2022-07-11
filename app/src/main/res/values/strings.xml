@@ -8,4 +8,10 @@
     <string name="category">Super Mercado</string>
     <string name="conta_ita">Conta Itaú</string>
     <string name="filtros">Filtros</string>
+    <string name="filtro_de_buscas">Filtro de buscas</string>
+    <string name="limpar">Limpar</string>
+    <string name="atrav_s_deste_recurso_voc_consegue_achar_facilmente_todos_os_lan_amentos_de_sua_conta_basta_escolher_as_op_es_de_filtro_abaixo">Através deste recurso você consegue achar facilmente todos os lançamentos de sua conta, basta escolher as opções de filtro abaixo.</string>
+    <string name="m_s">- Mês</string>
+    <string name="categorias">- Categorias</string>
+    <string name="aplicar_filtro">Aplicar Filtro</string>
 </resources>

@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/filter_by_month_selector_card.xml" value="0.249" />
+        <entry key="app/src/main/res/drawable-v24/filter_by_month_selector_text.xml" value="0.249" />
         <entry key="app/src/main/res/drawable-v24/ic_itau_logotipo.xml" value="0.235" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1405" />
+        <entry key="app/src/main/res/drawable/ic_arrow_left_back.xml" value="0.249" />
         <entry key="app/src/main/res/drawable/ic_automotive_services.xml" value="0.1405" />
         <entry key="app/src/main/res/drawable/ic_health_and_beauty.xml" value="0.1405" />
         <entry key="app/src/main/res/drawable/ic_health_and_beauty_.xml" value="0.1405" />
@@ -16,8 +19,12 @@
         <entry key="app/src/main/res/drawable/ic_transport.xml" value="0.1405" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/dialog_fragment_home_filter.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_details.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.27426810477657937" />
+        <entry key="app/src/main/res/layout/home_filter_by_category_card.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/home_filter_by_month_card.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/ic_arrow_left_back.xml" value="0.375" />
         <entry key="app/src/main/res/layout/item_card.xml" value="0.3177083333333333" />
         <entry key="app/src/main/res/layout/release_card.xml" value="0.5" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.31614583333333335" />

@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.ncz.android_desafio_itau.R
 import com.ncz.android_desafio_itau.databinding.FragmentDetailsBinding
@@ -29,6 +31,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
         super.onViewCreated(view, savedInstanceState)
         setupToolbar()
         getDetail()
+        binding.includeToolbar.toolbar.setOnClickListener {findNavController().popBackStack()}
     }
 
     override fun onDestroyView() {
@@ -46,5 +49,6 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
     private fun setupToolbar() {
         binding.includeToolbar.toolbar.title = getString(R.string.details)
     }
+
 
 }

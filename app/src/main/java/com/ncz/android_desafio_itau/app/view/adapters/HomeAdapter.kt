@@ -8,9 +8,16 @@ import com.ncz.android_desafio_itau.domain.entities.Release
 import com.ncz.android_desafio_itau.domain.utils.extensions.OnClick
 import com.ncz.android_desafio_itau.domain.utils.states.toCurrencyFormat
 
-class HomeAdapter(val release: List<Release> = listOf()) : RecyclerView.Adapter<HomeAdapter.ReleaseViewHolder>() {
+class HomeAdapter(val release: List<Release> = listOf()) :
+    RecyclerView.Adapter<HomeAdapter.ReleaseViewHolder>() {
 
     private lateinit var onClick: OnClick
+
+    val newReleases by lazy {
+        ArrayList<Release>(release.size).apply {
+            addAll(release)
+        }
+    }
 
 
     inner class ReleaseViewHolder(binding: ReleaseCardBinding) :
@@ -26,22 +33,37 @@ class HomeAdapter(val release: List<Release> = listOf()) : RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: HomeAdapter.ReleaseViewHolder, position: Int) {
-        holder.originName.text = release[position].origem
-        holder.value.text = release[position].valor.toCurrencyFormat()
-        holder.category.text = release[position].categoria?.nome.toString()
+        holder.originName.text = newReleases[position].origem
+        holder.value.text = newReleases[position].valor.toCurrencyFormat()
+        holder.category.text = newReleases[position].categoria?.nome.toString()
         release[position].categoria
 
         val item = holder.itemView
-        item.setOnClickListener{
-            onClick.onCellClickListener(release[position])
+        item.setOnClickListener {
+            onClick.onCellClickListener(newReleases[position])
         }
     }
 
-    override fun getItemCount() = release.size
+    override fun getItemCount() = newReleases.size
 
-    fun onClickListener(onClick: OnClick){
+    fun onClickListener(onClick: OnClick) {
         this.onClick = onClick
+    }
 
+    fun doFilter(months: List<Int>?, categories: List<Int>?) {
+        newReleases.clear()
+
+        val filter = release.filter { release ->
+            val foundCategoria =
+                if (categories?.isEmpty() != false) true else categories.any { it == release.categoria?.id }
+            val foundMonths =
+                if (months?.isEmpty() != false) true else months.any { it == release.mesLancamento }
+
+            foundMonths ?: true && foundCategoria ?: true
+        }
+
+        newReleases.addAll(filter)
+        notifyDataSetChanged()
     }
 }
 

@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_homeFilterBottomSheet"
+            app:destination="@id/homeFilterBottomSheet" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -23,4 +26,12 @@
             android:name="ReleaseObject"
             app:argType="com.ncz.android_desafio_itau.domain.entities.Release" />
     </fragment>
+    <dialog
+        android:id="@+id/homeFilterBottomSheet"
+        android:name="com.ncz.android_desafio_itau.app.view.adapters.HomeFilterBottomSheet"
+        android:label="HomeFilterBottomSheet" >
+        <argument
+            android:name="categories"
+            app:argType="com.ncz.android_desafio_itau.domain.entities.Category[]" />
+    </dialog>
 </navigation>

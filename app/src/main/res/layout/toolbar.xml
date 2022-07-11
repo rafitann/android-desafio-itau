@@ -13,5 +13,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:navigationIcon="@drawable/ic_arrow_left_back"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 </com.google.android.material.appbar.AppBarLayout>

@@ -14,3 +14,4 @@
 
 ## Outras Libs: Retrofit
 
+![preview](https://user-images.githubusercontent.com/34343940/178184342-d7606c25-3c4d-4a2c-a753-f85ae9f36b41.gif)

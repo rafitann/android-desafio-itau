@@ -22,6 +22,8 @@
         <entry key="app/src/main/res/layout/release_card.xml" value="0.5" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/layout/user_account_card.xml" value="0.6161490683229813" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.249" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.134" />
       </map>
     </option>
   </component>
